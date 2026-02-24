@@ -1,0 +1,217 @@
+.concert-page{
+    width: 100%;
+    height: 1600px;
+}
+
+.concert-titles{
+    height: auto;
+}
+
+.concert-title-regular{
+    position: absolute;
+    left: 61px;
+    top: 170px; /* ТОЧНО по макету */
+    font-family: 'Urbanist', 'Lucida Sans', 'Lucida Sans Regular';
+    font-weight: 400;
+    font-size: 128px;
+    color: #FFFFFF;
+    line-height: 0.9;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 15;
+}
+
+.concert-title-light{
+    position: absolute;
+    left: 580px;
+    top: 270px; /* ТОЧНО по макету */
+    font-family: 'Urbanist', 'Licida sans ExtraLight';
+    font-weight: 200;
+    font-size: 128px;
+    font-style: italic;
+    color: #FFFFFF;
+    line-height: 0.9;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 15;
+}
+
+.concert-first-desc{
+    position: absolute;
+    left: 73px;
+    top: 450px; /* ТОЧНО по макету */
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    max-width: 600px;
+    z-index: 15;
+}
+/* Основной контейнер сетки */
+/* Основной контейнер сетки */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 равные колонки */
+    gap: 20px;  /* Отступы между колонками */
+    max-width: 90%;  /* Максимальная ширина сетки */
+    margin: 0 auto;  /* Центрирование на странице */
+    padding: 0px;
+}
+
+/* Колонка с фотографиями */
+.photo-column {
+    display: grid;
+    grid-template-columns: 1fr;  /* Одна колонка внутри */
+    gap: 17px;  /* Отступы между фотографиями по вертикали */
+    align-content: center;
+}
+
+/* Карточка фотографии - ВСЕ ОДИНАКОВЫЕ */
+.photo-card {
+    width: 100%;
+    aspect-ratio: auto;
+    height: 246px;   /* КВАДРАТ! Можно изменить на любое другое соотношение */
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении */
+.photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Изображение */
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;  /* Заполняет весь квадрат, обрезая лишнее */
+    transition: transform 0.5s ease;
+}
+
+/* Увеличение при наведении */
+.photo-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Вариант 6: Можно задать точную высоту (например, 300px) */
+.photo-card {
+    aspect-ratio: auto;  /* Отключаем соотношение сторон */
+    height: 246px;  /* Фиксированная высота */
+    /* В этом случае ширина будет подстраиваться под колонку */
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+    .photo-grid {
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .photo-column {
+        gap: 16px;
+    }
+    
+    /* Для варианта с фиксированной высотой */
+    .photo-card {
+        height: 250px;
+    }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: 1fr;  /* Одна колонка на мобильных */
+        gap: 16px;
+    }
+    
+    .photo-column {
+        gap: 16px;
+    }
+    
+    /* Для варианта с фиксированной высотой */
+    .photo-card {
+        height: 280px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .photo-grid {
+        padding: 12px;
+    }
+    
+    /* Для варианта с фиксированной высотой */
+    .photo-card {
+        height: 240px;
+    }
+}
+
+/* Плавное появление изображений */
+.photo-card img {
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);  /* Эффект размытия фона */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+.first-column{
+    margin-top: 560px;
+}
+.second-column{
+    margin-top: 264px;
+}

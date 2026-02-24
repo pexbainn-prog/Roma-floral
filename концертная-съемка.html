@@ -4,8 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Подключение шрифта Urbanist -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="индивидуальная.css">
+    <link rel="stylesheet" href="концертная.css">
+
 </head>
 <body>
-    БББББ
+    <header> 
+        <!-- Верхняя навигация -->
+    <div class="individual-nav">
+        <!-- Логотип слева -->
+        <div class="hero-logo"><a href="index.html" class="hero-link-logo">Roma floral</a></div>
+        
+        <!-- Навигация справа - вертикальное расположение -->
+        <div class="individual-menu">
+            <a href="index.html" class="individual-link home-link">главная</a>
+            <a href="#individual-footer" class="individual-link contacts-link">контакты</a>
+            <a href="https://t.me/pexbain" target="_blank" class="individual-link order-link">заказать съемку</a>
+        </div>
+    </div>
+    </header>
+    <!--  -->
+    <section class="concert-page"> 
+        <!-- Заголовки -->
+    <div class="concert-titles">
+        <h1 class="concert-title-regular">Концертные</h1>
+        <h1 class="concert-title-light">съемки</h1>
+    </div>
+    
+    <!-- Текстовое описание (первый абзац) - X 73 Y 411 -->
+    <p class="individual-description concert-first-desc">
+        Концертная съёмка — это направление, которым я занимаюсь: я снимаю музыкальные мероприятия, живые выступления артистов и музыкальных групп. В своей работе я стараюсь не просто зафиксировать сцену и исполнителей, а передать атмосферу концерта, его ритм и энергию.
+        <br><br>Для меня важно поймать эмоции артистов во время выступления, моменты взаимодействия с публикой и живую реакцию зрителей, чтобы через кадры ощущалось присутствие на концерте и  настроение события.
+    </p>
+    <!-- СЕТКА ФОТОГРАФИЙ -->
+    <div class="photo-grid">
+        
+        <div class="photo-column first-column">
+            <!-- 1.jpg - X 68 Y 617, размер 423x533 -->
+            <div class="photo-card photo-tall" onclick="openModal('comercial/1.jpg')">
+                <img src="comercial/1.png" alt="Индивидуальная съемка 1">
+            </div>
+            
+            <!-- 2.jpg - X 507 Y 617, размер 423x533 -->
+            <div class="photo-card photo-tall" onclick="openModal('comercial/2.jpg')">
+                <img src="comercial/2.png" alt="Индивидуальная съемка 2">
+            </div>
+            
+            <!-- 3.jpg - X 68 Y 1116, размер 274x348 -->
+            <div class="photo-card photo-medium" onclick="openModal('comercial/3.jpg')">
+                <img src="comercial/3.png" alt="Индивидуальная съемка 3">
+            </div>
+            
+            <!-- 4.jpg - X 358 Y 1167, размер 274x348 -->
+            <div class="photo-card photo-medium" onclick="openModal('comercial/4.jpg')">
+                <img src="comercial/4.png" alt="Индивидуальная съемка 4">
+            </div>
+        </div>
+        
+        <div class="photo-column second-column">
+            <!-- 5.jpg - X 650 Y 1171, размер 274x348 -->
+            <div class="photo-card photo-medium" onclick="openModal('comercial/5.jpg')">
+                <img src="comercial/5.png" alt="Индивидуальная съемка 5">
+            </div>
+            
+            <!-- 6.jpg - X 947 Y 522, размер 423x246 -->
+            <div class="photo-card photo-wide" onclick="openModal('comercial/6.png')">
+                <img src="comercial/6.png" alt="Индивидуальная съемка 6">
+            </div>
+            
+            <!-- 7.jpg - X 947 Y 785, размер 423x246 -->
+            <div class="photo-card photo-wide" onclick="openModal('comercial/7.jpg')">
+                <img src="comercial/7.png" alt="Индивидуальная съемка 7">
+            </div>
+            
+            <!-- 8.jpg - X 947 Y 1048, размер 423x246 -->
+            <div class="photo-card photo-wide" onclick="openModal('comercial/8.jpg')">
+                <img src="comercial/8.png" alt="Индивидуальная съемка 8">
+            </div>
+        </div>
+        
+        <div class="photo-column third-column">
+            <!-- 9.jpg - X 947 Y 1310, размер 423x246 -->
+            <div class="photo-card photo-wide" onclick="openModal('comercial/9.jpg')">
+                <img src="comercial/9.png" alt="Индивидуальная съемка 9">
+            </div>
+            
+            <!-- 10.jpg -->
+            <div class="photo-card photo-wide" onclick="openModal('comercial/10.jpg')">
+                <img src="comercial/10.png" alt="Индивидуальная съемка 10">
+            </div>
+            
+            <!-- 11.jpg -->
+            <div class="photo-card photo-wide" onclick="openModal('comercial/11.jpg')">
+                <img src="comercial/11.png" alt="Индивидуальная съемка 11">
+            </div>
+            
+            <!-- 12.jpg -->
+            <div class="photo-card photo-wide" onclick="openModal('comercial/12.jpg')">
+                <img src="comercial/12.png" alt="Индивидуальная съемка 12">
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <footer class="individual-footer" id="individual-footer">
+        <div class="footer-logo">Roma floral</div>
+    
+        <div class="social-icons">
+            <a href="https://t.me/romafloral" target="_blank" class="social-link">
+                <img src="10.jpg" alt="Telegram">
+            </a>
+            <a href="https://vk.com/romafloral" target="_blank" class="social-link">
+                <img src="11.jpg" alt="VK">
+            </a>
+            <a href="https://www.instagram.com/roma_floral?igsh=MXE1cnBudTQycmFhYg==" target="_blank" class="social-link">
+                <img src="12.jpg" alt="Instagram">
+            </a>
+        </div>
+    </footer>
 </body>
+
 </html>

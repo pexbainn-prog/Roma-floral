@@ -71,7 +71,10 @@ html {
     white-space: nowrap;
     z-index: 10;
 }
-
+.hero-link-logo{
+    color: #FFFFFF;
+    text-decoration: none;
+}
 /* Меню справа */
 .hero-menu {
     position: absolute;
