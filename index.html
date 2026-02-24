@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roma Floral</title>
+
+    <!-- Подключение шрифта Urbanist -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- ПЕРВАЯ СЕКЦИЯ (HERO) -->
+<section class="hero">
+    <!-- Верхняя навигация -->
+    <div class="hero-nav">
+        <!-- Логотип слева - Roma floral Mixed -->
+        <div class="hero-logo">Roma floral</div>
+        
+        <!-- Навигация справа - вертикальное расположение -->
+        <div class="hero-menu">
+            <a href="#portfolio" class="hero-link">Портфолио</a>
+            <a href="#footer" class="hero-link">Контакты</a>
+            <a href="https://t.me/pexbain" target="_blank" class="hero-link">Заказать съемку</a>
+        </div>
+    </div>
+    
+    <!-- Центральный текст -->
+    <div class="hero-title-block">
+        <span class="visual-text">Visual</span>
+        <span class="explorer-text">explorer</span>
+    </div>
+</section>
+
+<!-- ВТОРАЯ СЕКЦИЯ (ПОРТФОЛИО) -->
+<section class="portfolio" id="portfolio">
+    <!-- Нумерация 01 - X 713 Y 66 -->
+    <div class="section-number">01</div>
+    
+    <!-- Контейнер для двух колонок -->
+    <div class="portfolio-columns">
+        
+        <!-- ЛЕВАЯ КОЛОНКА (привязана к левой фотографии) -->
+        <div class="portfolio-column left-column">
+            <!-- Фото 2.jpg -->
+            <div class="image-wrapper">
+                <img src="2.jpg" alt="Индивидуальная съемка" class="portfolio-img">
+            </div>
+            
+            <!-- Заголовок -->
+            <h2 class="portfolio-title">Индивидуальная съемка</h2>
+            
+            <!-- Описание -->
+            <p class="portfolio-description">Персональная фотосессия, направленная на раскрытие характера, настроения и образа человека. Подходит для портфолио, личных проектов, соцсетей и творческих идей.</p>
+            
+            <!-- Ссылка подробнее -->
+            <!-- Ссылка подробнее -->
+            <a href="индивидуальная-съемка.html" class="portfolio-more">подробнее</a>
+            
+            <!-- Цена и кнопка (ПРИВЯЗАНЫ К ЛЕВОЙ КОЛОНКЕ) -->
+            <div class="price-btn-container left-price-container">
+                <span class="price-text">6 000 руб.</span>
+                <a href="https://t.me/pexbain" target="_blank" class="order-btn">заказать</a>
+            </div>
+        </div>
+        
+        <!-- ПРАВАЯ КОЛОНКА (привязана к правой фотографии) -->
+        <div class="portfolio-column right-column">
+            <!-- Фото 3.jpg -->
+            <div class="image-wrapper">
+                <img src="3.jpg" alt="Концертная съемка" class="portfolio-img">
+            </div>
+            
+            <!-- Заголовок -->
+            <h2 class="portfolio-title">Концертная съемка</h2>
+            
+            <!-- Описание -->
+            <p class="portfolio-description">Концертная съёмка — съёмка музыкального мероприятия: выступлений артистов и музыкальных групп. Передаёт атмосферу концерта, энергию сцены, эмоции исполнителей и зрителей.</p>
+            
+            <!-- Ссылка подробнее -->
+            <!-- Ссылка подробнее -->
+        <a href="концертная-съемка.html" class="portfolio-more">подробнее</a>
+            
+            <!-- Цена и кнопка (ПРИВЯЗАНЫ К ПРАВОЙ КОЛОНКЕ) -->
+            <div class="price-btn-container right-price-container">
+                <span class="price-text">6 000 руб.</span>
+                <a href="https://t.me/pexbain" target="_blank" class="order-btn">заказать</a>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- ТРЕТЬЯ СЕКЦИЯ (КАРУСЕЛЬ) -->
+<section class="carousel-section">
+    <!-- Нумерация 02 -->
+    <div class="carousel-number">02</div>
+    
+    <!-- Контейнер карусели -->
+    <div class="carousel-container">
+        
+        <!-- Контейнер для фотографий (чтобы анимировать группу) -->
+        <div class="carousel-track">
+            <!-- Фотографии будут добавляться через JavaScript -->
+        </div>
+        
+        <!-- ЛЕВАЯ КНОПКА -->
+        <button class="carousel-btn prev-btn">
+            <div class="btn-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </button>
+        
+        <!-- ПРАВАЯ КНОПКА -->
+        <button class="carousel-btn next-btn">
+            <div class="btn-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </button>
+        
+    </div>
+</section>
+
+<!-- ПОДВАЛ (FOOTER) -->
+<footer class="footer" id="footer">
+    <div class="footer-logo">Roma floral</div>
+    
+    <div class="social-icons">
+        <a href="https://t.me/romafloral" target="_blank" class="social-link">
+            <img src="10.jpg" alt="Telegram">
+        </a>
+        <a href="https://vk.com/romafloral" target="_blank" class="social-link">
+            <img src="11.jpg" alt="VK">
+        </a>
+        <a href="https://www.instagram.com/roma_floral?igsh=MXE1cnBudTQycmFhYg==" target="_blank" class="social-link">
+            <img src="12.jpg" alt="Instagram">
+        </a>
+    </div>
+</footer>
+
+<script>
+    // Массив с фотографиями (4.jpg - 9.jpg)
+    const images = ['4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg'];
+    
+    // Текущий индекс центральной фотографии (начинаем с 6.jpg - индекс 2)
+    let currentIndex = 2;
+    let isAnimating = false;
+    
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    // Функция для создания элементов карусели
+    function createCarouselItems() {
+        track.innerHTML = '';
+        
+        // Индексы для трех отображаемых фотографий
+        const leftIndex = (currentIndex - 1 + images.length) % images.length;
+        const centerIndex = currentIndex;
+        const rightIndex = (currentIndex + 1) % images.length;
+        
+        // Создаем левую фотографию
+        const leftItem = document.createElement('div');
+        leftItem.className = 'carousel-item left';
+        leftItem.dataset.index = leftIndex;
+        const leftImg = document.createElement('img');
+        leftImg.src = images[leftIndex];
+        leftImg.alt = `Photo ${leftIndex + 1}`;
+        leftItem.appendChild(leftImg);
+        track.appendChild(leftItem);
+        
+        // Создаем центральную фотографию
+        const centerItem = document.createElement('div');
+        centerItem.className = 'carousel-item center';
+        centerItem.dataset.index = centerIndex;
+        const centerImg = document.createElement('img');
+        centerImg.src = images[centerIndex];
+        centerImg.alt = `Photo ${centerIndex + 1}`;
+        centerItem.appendChild(centerImg);
+        track.appendChild(centerItem);
+        
+        // Создаем правую фотографию
+        const rightItem = document.createElement('div');
+        rightItem.className = 'carousel-item right';
+        rightItem.dataset.index = rightIndex;
+        const rightImg = document.createElement('img');
+        rightImg.src = images[rightIndex];
+        rightImg.alt = `Photo ${rightIndex + 1}`;
+        rightItem.appendChild(rightImg);
+        track.appendChild(rightItem);
+    }
+    
+    // Функция для анимации вправо (следующая)
+    function animateNext() {
+        if (isAnimating) return;
+        isAnimating = true;
+        
+        const items = document.querySelectorAll('.carousel-item');
+        const leftItem = document.querySelector('.carousel-item.left');
+        const centerItem = document.querySelector('.carousel-item.center');
+        const rightItem = document.querySelector('.carousel-item.right');
+        
+        // Получаем индексы
+        const centerIndex = parseInt(centerItem.dataset.index);
+        const rightIndex = parseInt(rightItem.dataset.index);
+        
+        // Анимируем: левая уходит, центральная становится левой, правая становится центральной
+        centerItem.classList.remove('center');
+        centerItem.classList.add('left');
+        
+        rightItem.classList.remove('right');
+        rightItem.classList.add('center');
+        
+        // Создаем новую правую фотографию
+        setTimeout(() => {
+            const newRightIndex = (rightIndex + 1) % images.length;
+            
+            const newRightItem = document.createElement('div');
+            newRightItem.className = 'carousel-item right';
+            newRightItem.dataset.index = newRightIndex;
+            newRightItem.style.opacity = '0';
+            
+            const newRightImg = document.createElement('img');
+            newRightImg.src = images[newRightIndex];
+            newRightImg.alt = `Photo ${newRightIndex + 1}`;
+            newRightItem.appendChild(newRightImg);
+            
+            track.appendChild(newRightItem);
+            
+            // Плавно появляется
+            setTimeout(() => {
+                newRightItem.style.opacity = '1';
+            }, 50);
+            
+            // Удаляем старую левую
+            if (leftItem) {
+                setTimeout(() => {
+                    leftItem.remove();
+                }, 500);
+            }
+            
+            // Обновляем текущий индекс
+            currentIndex = rightIndex;
+            isAnimating = false;
+        }, 500);
+    }
+    
+    // Функция для анимации влево (предыдущая)
+    function animatePrev() {
+        if (isAnimating) return;
+        isAnimating = true;
+        
+        const items = document.querySelectorAll('.carousel-item');
+        const leftItem = document.querySelector('.carousel-item.left');
+        const centerItem = document.querySelector('.carousel-item.center');
+        const rightItem = document.querySelector('.carousel-item.right');
+        
+        // Получаем индексы
+        const leftIndex = parseInt(leftItem.dataset.index);
+        const centerIndex = parseInt(centerItem.dataset.index);
+        
+        // Анимируем: правая уходит, центральная становится правой, левая становится центральной
+        centerItem.classList.remove('center');
+        centerItem.classList.add('right');
+        
+        leftItem.classList.remove('left');
+        leftItem.classList.add('center');
+        
+        // Создаем новую левую фотографию
+        setTimeout(() => {
+            const newLeftIndex = (leftIndex - 1 + images.length) % images.length;
+            
+            const newLeftItem = document.createElement('div');
+            newLeftItem.className = 'carousel-item left';
+            newLeftItem.dataset.index = newLeftIndex;
+            newLeftItem.style.opacity = '0';
+            
+            const newLeftImg = document.createElement('img');
+            newLeftImg.src = images[newLeftIndex];
+            newLeftImg.alt = `Photo ${newLeftIndex + 1}`;
+            newLeftItem.appendChild(newLeftImg);
+            
+            track.appendChild(newLeftItem);
+            
+            // Плавно появляется
+            setTimeout(() => {
+                newLeftItem.style.opacity = '1';
+            }, 50);
+            
+            // Удаляем старую правую
+            if (rightItem) {
+                setTimeout(() => {
+                    rightItem.remove();
+                }, 500);
+            }
+            
+            // Обновляем текущий индекс
+            currentIndex = leftIndex;
+            isAnimating = false;
+        }, 500);
+    }
+    
+    // Обработчики кнопок
+    nextBtn.addEventListener('click', animateNext);
+    prevBtn.addEventListener('click', animatePrev);
+    
+    // Инициализация
+    createCarouselItems();
+</script>
+
+</body>
+</html>

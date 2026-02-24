@@ -1,0 +1,735 @@
+/* Подключение шрифта Urbanist */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    background: #000;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-bottom: 30px; /* Отступ сверху, чтобы блок не прилипал к самому верху */
+}
+
+/* ===== ПЕРВАЯ СЕКЦИЯ (HERO) ===== */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 795px; /* Фиксированная высота */
+    margin: 0 auto;
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible; /* Чтобы ничего не обрезалось */
+}
+
+/* Затемнение для лучшей читаемости */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Все поверх затемнения */
+.hero-nav,
+.hero-title-block {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== ВЕРХНЯЯ НАВИГАЦИЯ ===== */
+.hero-nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Логотип Roma floral - X 73 Y 50 - шрифт Mixed (600) */
+.hero-logo {
+    position: absolute;
+    left: 73px;
+    top: 50px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Меню справа */
+.hero-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    right: 73px;
+    top: 50px;
+    z-index: 10;
+}
+
+/* Общие стили для всех ссылок */
+.hero-link {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.hero-link:hover {
+    opacity: 0.7;
+}
+
+/* ===== ЦЕНТРАЛЬНЫЙ ТЕКСТ ===== */
+.hero-title-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Чтобы текст не мешал кликать по ссылкам */
+}
+
+/* Текст "Visual" - X 68 Y 516 */
+.visual-text {
+    position: absolute;
+    left: 68px;
+    top: 516px; /* Внутри hero (795px), так что 516 < 795 */
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 150px;
+    color: #FFFFFF;
+    line-height: 0.9;
+    text-transform: lowercase;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Текст "explorer" - X 266 Y 616 */
+.explorer-text {
+    position: absolute;
+    left: 266px;
+    top: 616px; /* Внутри hero (795px), так что 616 < 795 */
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 200;
+    font-size: 150px;
+    color: #FFFFFF;
+    line-height: 0.9;
+    text-transform: lowercase;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 1200px) {
+    .hero {
+        height: 700px;
+    }
+    
+    .visual-text {
+        left: 40px;
+        top: 450px;
+        font-size: 120px;
+    }
+    
+    .explorer-text {
+        left: 200px;
+        top: 540px;
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 600px;
+    }
+    
+    .hero-logo {
+        left: 30px;
+        top: 30px;
+        font-size: 28px;
+    }
+    
+    .hero-menu {
+        right: 20px;
+        top: 80px;
+        gap: 8px;
+    }
+    
+    .hero-link {
+        font-size: 14px;
+    }
+    
+    .visual-text {
+        left: 20px;
+        top: 350px;
+        font-size: 80px;
+    }
+    
+    .explorer-text {
+        left: 120px;
+        top: 410px;
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 500px;
+    }
+    
+    .visual-text {
+        left: 20px;
+        top: 280px;
+        font-size: 60px;
+    }
+    
+    .explorer-text {
+        left: 90px;
+        top: 330px;
+        font-size: 60px;
+    }
+}
+
+/* ===== ВТОРАЯ СЕКЦИЯ (ПОРТФОЛИО) ===== */
+.portfolio {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #000000;
+    min-height: 1286px;
+    padding: 66px 73px 0 73px;
+    box-sizing: border-box;
+}
+
+/* Нумерация 01 */
+.section-number {
+    position: absolute;
+    top: 66px;
+    left: 713px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    z-index: 30;
+    transform: translateX(-50%);
+}
+
+/* Контейнер для двух колонок */
+.portfolio-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 120px; /* Отступ сверху для фотографий */
+    width: 100%;
+}
+
+/* Общие стили для колонок */
+.portfolio-column {
+    flex: 1;
+    max-width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ЛЕВАЯ КОЛОНКА - дополнительный отступ для точного позиционирования */
+.left-column {
+    margin-left: 45.1px; /* 118.1 - 73 = 45.1px */
+}
+
+/* ПРАВАЯ КОЛОНКА */
+.right-column {
+    margin-right: 0;
+}
+
+/* Обертка для фото */
+.image-wrapper {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+/* Фото */
+.portfolio-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Заголовок */
+.portfolio-title {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+/* Описание */
+.portfolio-description {
+    font-weight: 400;
+    font-size: 16px;
+    color: #B2AFAF;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Ссылка подробнее */
+.portfolio-more {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 14px;
+    color: #5E5E5E;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 60px; /* Увеличиваем отступ для цен */
+    transition: color 0.3s ease;
+}
+
+.portfolio-more:hover {
+    color: #FFFFFF;
+}
+
+/* ===== КОНТЕЙНЕРЫ ДЛЯ ЦЕН И КНОПОК ===== */
+.price-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-top: auto; /* Прижимаем к низу */
+    width: 100%;
+}
+
+/* Общие стили для текста цены */
+.price-text {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+/* Общие стили для кнопки */
+.order-btn {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #211C1B;
+    border-radius: 37.5px;
+    padding: 12px 32px;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 140px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.order-btn:hover {
+    background-color: #3a3230;
+}
+
+/* ЛЕВАЯ КОЛОНКА - точные позиции */
+.left-price-container {
+    position: relative;
+    left: 27.9px; /* 146 - 118.1 = 27.9px */
+    margin-top: 20px;
+}
+
+/* ПРАВАЯ КОЛОНКА - точные позиции */
+.right-price-container {
+    position: relative;
+    left: 35.23px; /* 836 - 800.77 = 35.23px */
+    margin-top: 20px;
+}
+
+/* Дополнительная корректировка для кнопок внутри контейнера */
+.left-price-container .order-btn {
+    margin-left: 0;
+}
+
+.right-price-container .order-btn {
+    margin-left: 0;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 1200px) {
+    .portfolio {
+        padding: 66px 30px 0 30px;
+    }
+    
+    .section-number {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .portfolio-columns {
+        flex-direction: column;
+        gap: 80px;
+        margin-top: 100px;
+    }
+    
+    .portfolio-column {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .left-column {
+        margin-left: 0;
+    }
+    
+    .left-price-container,
+    .right-price-container {
+        left: 0;
+    }
+    
+    .price-btn-container {
+        justify-content: flex-start;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 66px 20px 0 20px;
+    }
+    
+    .price-btn-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .portfolio-title {
+        font-size: 28px;
+    }
+    
+    .price-text {
+        font-size: 28px;
+    }
+    
+    .order-btn {
+        padding: 10px 24px;
+        min-width: 120px;
+        font-size: 14px;
+    }
+}
+/* ===== ТРЕТЬЯ СЕКЦИЯ (КАРУСЕЛЬ) ===== */
+.carousel-section {
+    position: relative;
+    width: 100%;
+    height: 802px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/* Нумерация 02 */
+.carousel-number {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    z-index: 30;
+}
+
+/* Контейнер карусели */
+.carousel-container {
+    position: relative;
+    max-width: 1440px;
+    height: 802px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+/* Трек с фотографиями */
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Общие стили для всех фотографий */
+.carousel-item {
+    position: absolute;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Левая фотография */
+.carousel-item.left {
+    width: 313px;
+    height: 208.67px;
+    left: 63px;
+    top: 103px;
+    z-index: 1;
+}
+
+/* Центральная фотография */
+.carousel-item.center {
+    width: 640px;
+    height: 426.67px;
+    left: 392px; /* 63 + 329 = 392 */
+    top: 103px;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Правая фотография */
+.carousel-item.right {
+    width: 313px;
+    height: 208.67px;
+    left: 1068px; /* 63 + 750 + (640-313)/2? Упрощаем: 63 + 750 + 255 = 1068 */
+    top: 426.67px; /* 426.67 - 109.67 = 317, но 103 + 426.67 - 109.67 - 208.67? */
+    /* По макету: Y = 103 + (-109.67) = -6.67, но нам нужно чтобы нижняя граница совпадала */
+    top: 320.33px; /* 103 + 426.67 - 209.34 = 320.33 */
+    z-index: 1;
+}
+
+/* Кнопки карусели */
+.carousel-btn {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+}
+
+.prev-btn {
+    left: 300px; /* 63 + 237 = 300 */
+    top: 426px; /* 103 + 323 = 426 */
+}
+
+.next-btn {
+    left: 1073px; /* 63 + 1010 = 1073 */
+    top: 154px; /* 103 + 51 = 154 */
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #969696;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-circle:hover {
+    border-color: #FFFFFF;
+    transform: scale(1.1);
+}
+
+.btn-circle svg path {
+    stroke: #969696;
+    transition: stroke 0.3s ease;
+}
+
+.btn-circle:hover svg path {
+    stroke: #FFFFFF;
+}
+
+/* ===== ПОДВАЛ ===== */
+.footer {
+    position: relative;
+    width: 100%;
+    height: 181px;
+    background-color: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    position: absolute;
+    left: 70px;
+    top: 40px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.social-icons {
+    position: absolute;
+    right: 70px;
+    top: 40px;
+    display: flex;
+    gap: 21px;
+}
+
+.social-link {
+    display: block;
+    width: 51px;
+    height: 51px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 1440px) {
+    .carousel-container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .carousel-item.left {
+        left: 5%;
+    }
+    
+    .carousel-item.center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .carousel-item.right {
+        right: 5%;
+        left: auto;
+    }
+    
+    .prev-btn {
+        left: 15%;
+    }
+    
+    .next-btn {
+        right: 15%;
+        left: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 30px 40px 0 40px;
+    }
+    
+    .hero-text {
+        padding-left: 40px;
+    }
+    
+    .portfolio {
+        padding: 40px;
+    }
+    
+    .portfolio-grid {
+        gap: 30px;
+    }
+    
+    .portfolio-bottom {
+        gap: 40px;
+    }
+    
+    .carousel-item.center {
+        width: 500px;
+        height: 333px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 20px 0 20px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-text {
+        padding-left: 20px;
+        padding-bottom: 60px;
+    }
+    
+    .portfolio {
+        padding: 30px 20px;
+    }
+    
+    .portfolio-grid {
+        flex-direction: column;
+    }
+    
+    .portfolio-item {
+        max-width: 100%;
+    }
+    
+    .portfolio-bottom {
+        gap: 30px;
+    }
+    
+    .carousel-section {
+        height: 600px;
+    }
+    
+    .carousel-item.center {
+        width: 400px;
+        height: 267px;
+    }
+    
+    .footer {
+        height: auto;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .footer-logo {
+        position: static;
+    }
+    
+    .social-icons {
+        position: static;
+        justify-content: center;
+    }
+}

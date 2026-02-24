@@ -1,0 +1,377 @@
+/* ===== СТРАНИЦА ИНДИВИДУАЛЬНАЯ СЪЕМКА ===== */
+
+.individual-page {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 1678px;
+    margin: 0 auto;
+    background-color: #010101;
+    padding-bottom: 100px;
+}
+
+/* ===== ВЕРХНЯЯ НАВИГАЦИЯ ===== */
+.individual-nav {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+/* Логотип Roma floral — X 73 Y 50 */
+.individual-logo {
+    position: absolute;
+    left: 73px;
+    top: 50px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    z-index: 20;
+}
+
+/* КОНТЕЙНЕР ДЛЯ ПРАВОГО МЕНЮ */
+.individual-menu {
+    position: absolute;
+    left: 1170px; /* Опорная точка по X */
+    top: 0;
+    width: 200px;
+    height: 200px;
+}
+
+/* КНОПКА "главная" — X 1170 Y 16 (выравнивание по правому краю) */
+.home-link {
+    position: absolute;
+    right: 0; /* Прижимаем к правому краю контейнера */
+    top: 65px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index: 20;
+    text-align: right;
+}
+
+/* КНОПКА "контакты" — X 1170 Y 100 (выравнивание по правому краю) */
+.contacts-link {
+    position: absolute;
+    right: 0; /* Прижимаем к правому краю контейнера */
+    top: 100px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index: 20;
+    text-align: right;
+}
+
+/* КНОПКА "заказать съемку" — X 1170 Y 142 (выравнивание по правому краю) */
+.order-link {
+    position: absolute;
+    right: 0; /* Прижимаем к правому краю контейнера */
+    top: 135px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index: 20;
+    text-align: right;
+}
+
+.individual-link:hover {
+    opacity: 0.7;
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+.individual-titles {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Больше места для заголовков */
+}
+
+/* "Индивидуальные" — X 61 Y 230 */
+.title-regular {
+    position: absolute;
+    left: 61px;
+    top: 230px; /* ТОЧНО по макету */
+    font-family: 'Urbanist', 'Lucida Sans', 'Lucida Sans Regular';
+    font-weight: 400;
+    font-size: 128px;
+    color: #FFFFFF;
+    line-height: 0.9;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 15;
+}
+
+/* "съемки" — X 838 Y 330 */
+.title-light {
+    position: absolute;
+    left: 838px;
+    top: 330px; /* ТОЧНО по макету */
+    font-family: 'Urbanist', 'Licida sans ExtraLight';
+    font-weight: 200;
+    font-size: 128px;
+    color: #FFFFFF;
+    line-height: 0.9;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 15;
+}
+
+/* ===== ТЕКСТОВЫЕ ОПИСАНИЯ ===== */
+.first-desc {
+    position: absolute;
+    left: 73px;
+    top: 700px; /* ТОЧНО по макету */
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    max-width: 600px;
+    z-index: 15;
+}
+
+.second-desc {
+    position: absolute;
+    left: 73px;
+    top: 810.25px; /* ТОЧНО по макету */
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    max-width: 600px;
+    z-index: 15;
+}
+
+/* ===== СЕТКА ФОТОГРАФИЙ ===== */
+.photo-grid {
+    position: relative;
+    width: 100%;
+    height: 1600px;
+    margin-top: -200px;
+    z-index: 10;
+}
+
+/* Общие стили для фото */
+.photo-item {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 1.jpg — X 68 Y 617, 423x533 */
+.photo-1 {
+    left: 68px;
+    top: 617px;
+    width: 423px;
+    height: 533px;
+}
+
+/* 2.jpg — X 507 Y 617, 423x533 */
+.photo-2 {
+    left: 507px;
+    top: 617px;
+    width: 423px;
+    height: 533px;
+}
+
+/* 3.jpg — X 68 Y 1116, 274x348 */
+.photo-3 {
+    left: 68px;
+    top: 1167px;
+    width: 274px;
+    height: 348px;
+}
+
+/* 4.jpg — X 358 Y 1167, 274x348 */
+.photo-4 {
+    left: 358px;
+    top: 1167px;
+    width: 274px;
+    height: 348px;
+}
+
+/* 5.jpg — X 650 Y 1171, 274x348 */
+.photo-5 {
+    left: 650px;
+    top: 1171px;
+    width: 274px;
+    height: 348px;
+}
+
+/* 6.jpg — X 947 Y 522, 423x246 */
+.photo-6 {
+    left: 947px;
+    top: 522px;
+    width: 423px;
+    height: 246px;
+}
+
+/* 7.jpg — X 947 Y 785, 423x246 */
+.photo-7 {
+    left: 947px;
+    top: 785px;
+    width: 423px;
+    height: 246px;
+}
+
+/* 8.jpg — X 947 Y 1048, 423x246 */
+.photo-8 {
+    left: 947px;
+    top: 1048px;
+    width: 423px;
+    height: 246px;
+}
+
+/* 9.jpg — X 947 Y 1310, 423x246 */
+.photo-9 {
+    left: 947px;
+    top: 1310px;
+    width: 423px;
+    height: 246px;
+}
+
+/* ===== ПОДВАЛ ===== */
+.individual-footer {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 181px;
+    margin: 0 auto;
+    background-color: #010101;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    position: absolute;
+    left: 70px;
+    top: 40px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.social-icons {
+    position: absolute;
+    right: 70px;
+    top: 40px;
+    display: flex;
+    gap: 21px;
+}
+
+.social-link {
+    display: block;
+    width: 51px;
+    height: 51px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== ПЛАВНЫЙ СКРОЛЛ ===== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+/* ===== МОДАЛЬНОЕ ОКНО ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #999;
+}
+
+.modal-nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-prev,
+.modal-next {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
